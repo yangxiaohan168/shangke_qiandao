@@ -1,0 +1,47 @@
+/* pages/class_detail/class_detail.wxss */
+/*顶部头像样式*/
+.student_top{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/*按钮区域*/
+.detail_button{
+  margin-top: 20rpx;
+  margin-left: 10%;
+  width: 80%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 30rpx;
+  border-bottom: 5rpx solid #999999;
+}
+.detail_button view{
+    background-color: #2d8cf0;
+    width: 150rpx;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20rpx;
+    color: white;
+}
+
+/*遍历学生姓名样式*/
+.student_list{
+   width: 80%;
+   margin-left: 10%;
+   height: 70rpx;
+   display: flex;
+   flex-direction: row;
+   justify-content: start;
+   align-items: center;
+
+}

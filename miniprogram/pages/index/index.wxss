@@ -1,0 +1,42 @@
+/* pages/index/index.wxss */
+.user_top{
+  display: flex;
+  justify-content: center;
+}
+
+/*姓名显示区域*/
+.xuan_name{
+  width: 90%;
+  margin-left: 5%;
+  height: 300rpx;
+  font-size: 50rpx;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  
+}
+/*按钮区域样式*/
+.start_end{
+  margin-top: 50rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  height: 100rpx;
+  margin-left: 10%;
+}
+
+.start_end view{
+   width: 200rpx;
+   height: 90%;
+   border-radius: 20rpx;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #2d8cf0;
+   font-size: 35rpx;
+   color: white;
+}

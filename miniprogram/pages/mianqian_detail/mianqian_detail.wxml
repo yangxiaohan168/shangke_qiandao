@@ -1,0 +1,21 @@
+<!--pages/mianqian_detail/mianqian_detail.wxml-->
+  <!--顶部签到-->
+  <view class="class_top">
+                <view class="class_top1">
+                  <view class="class_top1_2"></view>
+                  <view style="color: #999999;font-size: 30rpx;margin-left: 10rpx;">签到记录 
+                        
+                  </view>
+                </view>
+                <button size="mini" style="width: 230rpx;height: 60rpx;align-items: center;font-size: 30rpx;" type="primary" catchtap="chang_code">获取签到码</button>
+  </view>
+
+      <!--遍历面对面签到-->
+      <view class="class_list">
+              <van-cell-group inset >
+                  <block wx:for="{{student}}" wx:key="index">
+                    <van-cell wx:if="{{item.state=='已到'}}" title="{{index+1}}、{{item.name}}" value="{{item.qiandao_time}}--{{item.state}}" bindtap="mianqian_caozuo" data-id="{{item._id}}" value-class="value_yd"/>
+                    <van-cell wx:if="{{item.state=='迟到'}}" title="{{index+1}}、{{item.name}}" value="{{item.qiandao_time}}--{{item.state}}" bindtap="mianqian_caozuo" data-id="{{item._id}}" value-class="value_chidao"/>
+                  </block>
+              </van-cell-group>
+          </view>

@@ -1,0 +1,38 @@
+<!--pages/index/index.wxml-->
+
+<!--头像-->
+<view class="user_top">
+  <open-data style="width: 100rpx;height: 100rpx;" type="userAvatarUrl"></open-data>
+</view>
+
+<!--通知栏-->
+<van-notice-bar
+  left-icon="volume-o"
+  text="{{tip}}"
+  speed="30"
+/>
+
+<!--选择班级-->
+<van-cell title="当前班级" value="{{class_name}}" is-link arrow-direction="down" bind:click="xuan_class" />
+
+<!--姓名显示区域-->
+<view class="xuan_name">{{xuan_student}}</view>
+
+<view class="start_end">
+     <view catchtap="start">随机点名</view>
+     <view catchtap="end">停止点名</view>
+</view>
+
+
+<!--弹窗选择操作-->
+<van-popup
+  show="{{ xuan_show }}"
+  round
+  position="bottom"
+  custom-style="height: 50%"
+  bind:close="xuan_Close"
+>
+      <van-picker show-toolbar  columns="{{ class }}" bind:cancel="class_cancel" bind:confirm="class_confirm" />
+</van-popup>
+
+

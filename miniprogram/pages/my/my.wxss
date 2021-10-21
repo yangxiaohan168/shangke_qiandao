@@ -1,0 +1,49 @@
+/* pages/my/my.wxss */
+
+.top{
+   display: flex;
+   justify-content: center;
+   z-index: 100;
+   position: relative;
+
+   width: 100%;
+}
+.top_img{
+
+  width: 100%;
+  border-bottom-left-radius: 200rpx;
+  border-bottom-right-radius: 200rpx;
+}
+
+
+.center_nei{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+
+   width: 86%;
+   margin-left: 5%;
+   border-radius: 20rpx;
+   background-color: white;
+
+   padding: 20rpx 20rpx 20rpx 20rpx;
+   margin-bottom: 100rpx;
+   margin-top: 50rpx;
+}
+.center_nei1{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 100rpx;
+
+  margin-top: 10rpx;
+  border-bottom: 2rpx solid #e9eaec;
+}
+.center_nei12{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

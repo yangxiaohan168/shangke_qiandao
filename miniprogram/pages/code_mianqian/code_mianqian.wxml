@@ -1,0 +1,30 @@
+<!--pages/code_mianqian/code_mianqian.wxml-->
+<block wx:if="{{success_show==false}}">
+          <van-cell-group inset custom-class="contain">
+          <van-cell title="签到名称" value="{{shuju.mianqian_name}}" />
+          <van-cell title="截止时间" value="{{shuju.jiezhi_time}}" />
+          <van-field
+            value="{{ value }}"
+            placeholder="请输入需要签到的姓名"
+            bind:change="onChange"
+            label="签到姓名"
+          />
+        </van-cell-group>
+
+        <view class="qiandao">
+                  <van-button round size="small" color="#7232dd" bind:click="qiandao">签到</van-button>
+        </view>
+</block>
+
+<block wx:if="{{success_show}}">
+  <view class="success_mian">
+    <van-empty
+          class="custom-image"
+          image="https://636c-cloud-3gx0x0b3f9495a6c-1305746789.tcb.qcloud.la/success.png?sign=86c0d4a520b533d0de0aa26a5de229b9&t=1634608884"
+         
+        />
+        <view>签到成功</view>
+        <navigator open-type="exit" target="miniProgram" class="tuichu" hover-class="navigator-hover">退出</navigator>
+  </view>
+</block>
+

@@ -1,0 +1,28 @@
+<!--pages/class_detail/class_detail.wxml-->
+
+<!--顶部头像-->
+<view class="student_top">
+     <image style="width: 100rpx;height: 100rpx;" src="/images/boy.png"></image>
+     <image style="width: 100rpx;height: 100rpx;" src="/images/girl.png"></image>
+</view>
+
+<!--按钮区域-->
+<view class="detail_button">
+   <block wx:if="{{edit_show}}">
+       <view catchtap="edit">编辑</view>
+   </block>
+   <block wx:if="{{!edit_show}}">
+       <view style="margin-right: 50rpx;" catchtap="delete_student">删除</view>
+       <view catchtap="cancel_student">取消</view>
+   </block>
+</view>
+
+<!--遍历学生名字-->
+<block wx:for="{{student}}" wx:key="index">
+     <view class="student_list" wx:if="{{edit_show}}">
+          <view>{{index+1}}、{{item.name}}</view>
+     </view>
+     <view class="student_list" wx:if="{{!edit_show}}">
+            <van-checkbox value="{{item.checked}}" name="{{index}}" bind:change="onChange" data-index="{{index}}">{{index+1}}、{{item.name}}</van-checkbox>
+     </view>
+</block>

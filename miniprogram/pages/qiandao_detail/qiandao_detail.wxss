@@ -1,0 +1,134 @@
+/* pages/qiandao_detail/qiandao_detail.wxss */
+/*顶部签到记录样式 */
+.class_top{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  height: 100rpx;
+  
+}
+.class_top1{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  margin-left: 40rpx;
+  width: 60%;
+}
+.class_top1_2{
+  width: 10rpx;
+  height: 10rpx;
+  border-radius: 50%;
+  background-color: orange;
+}
+
+/*点名*/
+.dianming{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70rpx;
+  color: #2d8cf0;
+}
+.dianming_1{
+  width: 30%;
+  height: 50rpx;
+  background-color: white;
+  font-size: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2rpx solid #2d8cf0;
+  color: #2d8cf0;
+}
+.dianming_active{
+  width: 30%;
+  height: 50rpx;
+  background-color: #2d8cf0;
+  font-size: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2rpx solid #2d8cf0;
+  color: white;
+}
+.xuan_xia{
+    margin-top: 5rpx;
+    margin-right: 20rpx;
+}
+
+
+/*底部样式*/
+.dibu{
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100rpx;
+  border: 5rpx solid #999999;
+  bottom: 0rpx;
+}
+.dibu_1{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 30rpx;
+  width: 20%;
+  height: 90%;
+
+}
+.value_chidao{
+  color: #ff9900 !important;
+  font-weight: bolder;
+
+}
+.value_kk{
+  color: #ed3f14 !important;
+  font-weight: bolder;
+}
+.value_qj{
+  color: #2d8cf0 !important;
+  font-weight: bolder;
+}
+.value_yd{
+  color: #19be6b !important;
+  font-weight: bolder;
+}
+
+/*二维码点名样式*/
+.ziti{
+  font-size: 30rpx !important;
+}
+.anniu{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  margin-left: 5%;
+  height: 500rpx;
+
+}
+.anniu_1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  height: 80rpx;
+  width: 100%;
+  border: 2rpx solid #2d8cf0;
+}
+.chang_code{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50rpx;
+}

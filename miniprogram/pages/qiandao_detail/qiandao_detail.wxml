@@ -1,0 +1,176 @@
+<!--pages/qiandao_detail/qiandao_detail.wxml-->
+<!--顶部记录-->
+<view class="class_top">
+    <view class="class_top1">
+       <view class="class_top1_2"></view>
+       <view style="color: #999999;font-size: 30rpx;margin-left: 10rpx;">签到记录</view>
+    </view>
+    <button size="mini" style="width: 180rpx;height: 60rpx;align-items: center;font-size: 30rpx;" type="primary" catchtap="daochu">导出记录</button>
+</view>
+
+<!-- <view class="chang_code">
+           <van-button round style="margin-bottom: 50rpx;" size="small" color="#7232dd" bind:click="chang_code">导出签到记录</van-button>
+</view> -->
+
+<!--点名样式-->
+<view class="dianming">
+      <view class="{{dianming_way=='1'?'dianming_active':'dianming_1'}}" catchtap="gengai" data-id="1">顺序点名</view>
+      <view class="{{dianming_way=='2'?'dianming_active':'dianming_1'}}" catchtap="gengai" data-id="2">二维码点名</view>
+</view>
+
+<block wx:if="{{dianming_way==1}}">
+         
+          <van-cell-group inset>
+            <block  wx:for="{{student}}" wx:key="index">
+             <!--未到-->
+             <van-cell
+                  title=" {{ item.name }}"
+                  data-index="{{ index }}"
+                  bind:click="xuan"
+                  value="{{item.state}}"
+                  wx:if="{{item.state=='未到'}}"
+                  
+                >
+                    <van-checkbox
+                        slot= "icon"
+                        value="{{item.checked}}"
+                        custom-class="xuan_xia"
+                      />
+                </van-cell>
+                <!--迟到-->
+                <van-cell
+                  title=" {{ item.name }}"
+                  data-index="{{ index }}"
+                  bind:click="xuan"
+                  value="{{item.state}}"
+                  wx:if="{{item.state=='迟到'}}"
+                  value-class="value_chidao"
+                >
+                    <van-checkbox
+                        slot= "icon"
+                        value="{{item.checked}}"
+                        custom-class="xuan_xia"
+                      />
+                </van-cell>
+                <!--旷课-->
+                <van-cell
+                  title=" {{ item.name }}"
+                  data-index="{{ index }}"
+                  bind:click="xuan"
+                  value="{{item.state}}"
+                  wx:if="{{item.state=='旷课'}}"
+                  value-class="value_kk"
+                >
+                    <van-checkbox
+                        slot= "icon"
+                        value="{{item.checked}}"
+                        custom-class="xuan_xia"
+                      />
+                </van-cell>
+                <!--请假-->
+                 <van-cell
+                  title=" {{ item.name }}"
+                  data-index="{{ index }}"
+                  bind:click="xuan"
+                  value="{{item.state}}"
+                  wx:if="{{item.state=='请假'}}"
+                  value-class="value_qj"
+                >
+                    <van-checkbox
+                        slot= "icon"
+                        value="{{item.checked}}"
+                        custom-class="xuan_xia"
+                      />
+                </van-cell>
+                 <!--已到-->
+                 <van-cell
+                  title=" {{ item.name }}"
+                  data-index="{{ index }}"
+                  bind:click="xuan"
+                  value="{{item.state}}"
+                  wx:if="{{item.state=='已到'}}"
+                  value-class="value_yd"
+                >
+                    <van-checkbox
+                        slot= "icon"
+                        value="{{item.checked}}"
+                        custom-class="xuan_xia"
+                      />
+                </van-cell>
+            </block>
+          </van-cell-group>
+
+</block>
+
+<!--底部操作区域-->
+<view class="dibu" wx:if="{{dianming_way==1}}">
+    <view class="dibu_1" catchtap="caozuo_state" data-text="迟到">
+          <image style="width:50rpx;height:50rpx;" src="/images/shijian.png"></image>
+          <view>迟到</view>
+    </view>
+    <view class="dibu_1" catchtap="caozuo_state" data-text="旷课">
+          <image style="width:50rpx;height:50rpx;" src="/images/shijian.png"></image>
+          <view>旷课</view>
+    </view>
+    <view class="dibu_1" catchtap="caozuo_state" data-text="请假">
+          <image style="width:50rpx;height:50rpx;" src="/images/shijian.png"></image>
+          <view>请假</view>
+    </view>
+    <view class="dibu_1" catchtap="caozuo_state" data-text="已到">
+          <image style="width:50rpx;height:50rpx;" src="/images/yidao.png"></image>
+          <view>已到</view>
+    </view>
+</view>
+
+<!--二维码点名-->
+<block wx:if="{{dianming_way==2}}">
+       <!--通知栏-->
+        <van-notice-bar
+          left-icon="volume-o"
+          text="点击按钮生成二维码,长按图片保存并分享"
+          scrollable="{{gundong}}"
+          custom-class="ziti"
+        />
+        <van-notice-bar
+          left-icon="volume-o"
+          text="设置开始、结束时间，超过时间签到为迟到"
+          scrollable="{{gundong}}"
+          custom-class="ziti"
+        />
+        <van-notice-bar
+          left-icon="volume-o"
+          text="新增设置签到位置，超过距离将不能扫码签到"
+          scrollable="{{gundong}}"
+          custom-class="ziti"
+        />
+
+       <van-cell is-link title="开始时间" value="{{start_time}}" bind:click="set_start" />
+       <van-cell is-link title="结束时间" value="{{end_time}}" bind:click="set_end" />
+       <van-cell is-link title="签到位置" value="{{qiandao_location}}" bind:click="set_location" />
+       <view class="chang_code">
+           <van-button round size="small" color="#7232dd" bind:click="chang_code">生成签到码</van-button>
+       </view>
+       <!--弹窗-->
+       <van-popup show="{{ start_show }}" z-index="100" round position="bottom" duration>
+            <van-datetime-picker
+              type="year-month date time"
+              min-date="{{ minDate }}"
+              title="选择签到开始时间"
+              bind:change="start_change"
+              bind:confirm="start_confirm"
+              bind:cancel="start_cancel"
+              formatter="{{ formatter }}"
+            />
+        </van-popup>
+       <van-popup show="{{ end_show }}" z-index="100" round position="bottom" duration>
+            <van-datetime-picker
+              type="year-month date time"
+              min-date="{{ minDate }}"
+              title="选择签到结束时间"
+              bind:change="end_change"
+              bind:confirm="end_confirm"
+              bind:cancel="end_cancel"
+              formatter="{{ formatter }}"
+            />
+        </van-popup>
+</block>

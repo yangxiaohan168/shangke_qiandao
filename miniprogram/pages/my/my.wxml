@@ -1,0 +1,68 @@
+<!--pages/my/my.wxml-->
+<view class="top">
+   <open-data style="width: 100rpx;height: 100rpx;position: absolute;margin-top: 33%;" type="userAvatarUrl"></open-data>
+   <image class="top_img" src="https://636c-cloud-3gx0x0b3f9495a6c-1305746789.tcb.qcloud.la/tongxue.png?sign=a726454893f29ac05d744e3755a46762&t=1634638598"></image>
+</view>
+
+<view class="center_nei">
+       <view class="center_nei1">
+              <view class="center_nei12">
+                    <image style="width: 40rpx;height: 40rpx;" src="/images/sousuo.png"></image>
+                    <view style="margin-left: 20rpx;font-size: 30rpx;">上课搜题</view>
+              </view>
+              <image style="width: 40rpx;height: 40rpx;" src="/images/right.png"></image>
+       </view>
+       <view class="center_nei1">
+              <view class="center_nei12">
+                    <image style="width: 40rpx;height: 40rpx;" src="/images/sousuo.png"></image>
+                    <view style="margin-left: 20rpx;font-size: 30rpx;">上课点名(学生版)</view>
+              </view>
+              <image style="width: 40rpx;height: 40rpx;" src="/images/right.png"></image>
+       </view>
+       <view class="center_nei1">
+              <view class="center_nei12">
+                    <image style="width: 40rpx;height: 40rpx;" src="/images/xiaoxi.png"></image>
+                    <view style="margin-left: 20rpx;font-size: 30rpx;">我的消息</view>
+              </view>
+              <image style="width: 40rpx;height: 40rpx;" src="/images/right.png"></image>
+       </view>
+       <view class="center_nei1" catchtap="go_class">
+              <view class="center_nei12">
+                    <image style="width: 40rpx;height: 40rpx;" src="/images/banji.png"></image>
+                    <view style="margin-left: 20rpx;font-size: 30rpx;">我的班级</view>
+              </view>
+              <image style="width: 40rpx;height: 40rpx;" src="/images/right.png"></image>
+       </view>
+       <view class="center_nei1"  catchtap="go_qiandao">
+              <view class="center_nei12">
+                    <image style="width: 40rpx;height: 40rpx;" src="/images/my_qiandao.png"></image>
+                    <view style="margin-left: 20rpx;font-size: 30rpx;">我的签到</view>
+              </view>
+              <image style="width: 40rpx;height: 40rpx;" src="/images/right.png"></image>
+       </view>
+       <view class="center_nei1">
+              <view class="center_nei12">
+                    <image style="width: 40rpx;height: 40rpx;" src="/images/zanshang.png"></image>
+                    <view style="margin-left: 20rpx;font-size: 30rpx;">赞赏支持</view>
+              </view>
+              <image style="width: 40rpx;height: 40rpx;" src="/images/right.png"></image>
+       </view>
+       <view class="center_nei1">
+              <view class="center_nei12">
+                    <image style="width: 40rpx;height: 40rpx;" src="/images/jiaocheng.png"></image>
+                    <view style="margin-left: 20rpx;font-size: 30rpx;">使用教程</view>
+              </view>
+              <image style="width: 40rpx;height: 40rpx;" src="/images/right.png"></image>
+       </view>
+
+       <button style="font-size: 30rpx;width: 117%;margin-left: -50rpx;" open-type="feedback" >
+          <view class="center_nei1">  
+                  <view class="center_nei12">
+                        <image style="width: 40rpx;height: 40rpx;" src="/images/bi.png"></image>
+                        <view style="margin-left: 20rpx;font-size: 30rpx;">意见反馈</view>
+                  </view>
+                  <image style="width: 40rpx;height: 40rpx;" src="/images/right.png"></image>
+          </view>
+      </button>
+</view>
+

@@ -1,0 +1,53 @@
+<!--pages/add/add.wxml-->
+<!--顶部班级-->
+<view class="class_top">
+    <view class="class_top1">
+       <view class="class_top1_2"></view>
+       <view style="color: #999999;font-size: 30rpx;margin-left: 10rpx;">班级列表</view>
+    </view>
+    <button size="mini" style="width: 180rpx;height: 60rpx;align-items: center;font-size: 30rpx;" type="primary" catchtap="add_class">添加班级</button>
+</view>
+
+<!--弹窗添加班级-->
+<van-popup custom-style="width:80%;height:200rpx;border-radius:10rpx;" show="{{ add_show }}">
+      <van-field
+        value="{{ class_value }}"
+        placeholder="请输入班级名称"
+        bind:change="onChange"
+        label="班级名称"
+        maxlength="15"
+      />
+      <view class="add">
+           <view class="add_cancel" catchtap="add_cancel">取消</view>
+           <view class="add_comfire" catchtap="add_comfire">确定</view>
+      </view>
+</van-popup>
+
+<!--遍历班级-->
+  <view class="class_list">
+    <van-cell-group inset >
+        <block wx:for="{{class_list}}" wx:key="index">
+          <van-cell title="{{index+1}}、{{item.class_name}}" value="总人数：{{item.student.length}}" is-link bindtap="class_caozuo" data-id="{{item._id}}" data-name="{{item.class_name}}"/>
+        </block>
+    </van-cell-group>
+  </view>
+
+
+
+
+<!--弹窗选择操作-->
+<van-popup
+  show="{{ caozuo_show }}"
+  round
+  position="bottom"
+  custom-style="height: 50%"
+  bind:close="caozuo_Close"
+>
+  <view class="caozuo_button">
+    <view style="color: #999999;font-size: 30rpx;">提示：请选择对应功能</view>
+    <van-button size="small" plain type="info" catchtap="go" data-url="/pages/add_student/add_student">添加学生</van-button>
+    <van-button size="small" plain type="info" catchtap="go" data-url="/pages/class_detail/class_detail">查看详情</van-button>
+    <van-button size="small" plain type="info" catchtap="delete_class">删除班级</van-button>
+    <van-button size="small" plain type="info" catchtap="share_class"><button style="font-size: 30rpx;color: #2d8cf0;" open-type="share">分享班级给好友</button></van-button>
+  </view>
+</van-popup>

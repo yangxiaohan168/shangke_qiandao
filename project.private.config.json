@@ -1,0 +1,312 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "db guide",
+          "pathName": "pages/databaseGuide/databaseGuide",
+          "query": ""
+        },
+        {
+          "name": "pages/getOpenId/index",
+          "pathName": "pages/getOpenId/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/deployService/index",
+          "pathName": "pages/deployService/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/selectRecord/index",
+          "pathName": "pages/selectRecord/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/sumRecordResult/index",
+          "pathName": "pages/sumRecordResult/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/updateRecord/index",
+          "pathName": "pages/updateRecord/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/updateRecordResult/index",
+          "pathName": "pages/updateRecordResult/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/updateRecordSuccess/index",
+          "pathName": "pages/updateRecordSuccess/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/paihang/paihang",
+          "pathName": "pages/paihang/paihang",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/secondhand/secondhand",
+          "pathName": "pages/secondhand/secondhand",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/second_fabu/second_fabu",
+          "pathName": "pages/second_fabu/second_fabu",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/secondhand/secondhand",
+          "pathName": "pages/secondhand/secondhand",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/secondhand/secondhand",
+          "pathName": "pages/secondhand/secondhand",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/pub_detail/pub_detail",
+          "pathName": "pages/pub_detail/pub_detail",
+          "query": "id=14139e12613af6500b55254a1f3d26fa",
+          "scene": null
+        },
+        {
+          "name": "pages/pingjia/pingjia",
+          "pathName": "pages/pingjia/pingjia",
+          "query": "publish_id=2d44d6c261469ad60dbeb0d7708a84ec",
+          "scene": null
+        },
+        {
+          "name": "pages/chakan_pingjia/chakan_pingjia",
+          "pathName": "pages/chakan_pingjia/chakan_pingjia",
+          "query": "publish_id=2d44d6c261469ad60dbeb0d7708a84ec",
+          "scene": null
+        },
+        {
+          "name": "pages/yijian/yijian",
+          "pathName": "pages/yijian/yijian",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/paihang/paihang",
+          "pathName": "pages/paihang/paihang",
+          "query": "id=%E5%B7%B2%E8%AE%A4%E8%AF%81",
+          "scene": null
+        },
+        {
+          "name": "pages/dizhi/dizhi",
+          "pathName": "pages/dizhi/dizhi",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/add/add",
+          "pathName": "pages/add/add",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/add/add",
+          "pathName": "pages/add/add",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/add/add",
+          "pathName": "pages/add/add",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/add_student/add_student",
+          "pathName": "pages/add_student/add_student",
+          "query": "id=9e7190f16169188b00270a613284819a",
+          "scene": null
+        },
+        {
+          "name": "pages/add_student/add_student",
+          "pathName": "pages/add_student/add_student",
+          "query": "id=9e7190f16169188b00270a613284819a",
+          "scene": null
+        },
+        {
+          "name": "pages/class_detail/class_detail",
+          "pathName": "pages/class_detail/class_detail",
+          "query": "id=9e7190f16169149100269773004da7b4",
+          "scene": null
+        },
+        {
+          "name": "pages/qiandao/qiandao",
+          "pathName": "pages/qiandao/qiandao",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/qiandao/qiandao",
+          "pathName": "pages/qiandao/qiandao",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/qiandao/qiandao",
+          "pathName": "pages/qiandao/qiandao",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/qiandao/qiandao",
+          "pathName": "pages/qiandao/qiandao",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/qiandao/qiandao",
+          "pathName": "pages/qiandao/qiandao",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/qiandao_detail/qiandao_detail",
+          "pathName": "pages/qiandao_detail/qiandao_detail",
+          "query": "id=18ed0968616bcc860062fb5f500ae6a8",
+          "scene": null
+        },
+        {
+          "name": "pages/qiandao/qiandao",
+          "pathName": "pages/qiandao/qiandao",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/qiandao_detail/qiandao_detail",
+          "pathName": "pages/qiandao_detail/qiandao_detail",
+          "query": "id=859059a5616bd5d6006ed91e7c00b2d1",
+          "scene": null
+        },
+        {
+          "name": "pages/qiandao_detail/qiandao_detail",
+          "pathName": "pages/qiandao_detail/qiandao_detail",
+          "query": "id=859059a5616bd5d6006ed91e7c00b2d1",
+          "scene": null
+        },
+        {
+          "name": "pages/qiandao_detail/qiandao_detail",
+          "pathName": "pages/qiandao_detail/qiandao_detail",
+          "query": "id=9e7190f1616cd8d1008920411cd08154",
+          "scene": null
+        },
+        {
+          "name": "pages/qiandao/qiandao",
+          "pathName": "pages/qiandao/qiandao",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/mianqian_detail/mianqian_detail",
+          "pathName": "pages/mianqian_detail/mianqian_detail",
+          "query": "id=",
+          "scene": null
+        },
+        {
+          "name": "pages/code_mianqian/code_mianqian",
+          "pathName": "pages/code_mianqian/code_mianqian",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/mianqian_detail/mianqian_detail",
+          "pathName": "pages/mianqian_detail/mianqian_detail",
+          "query": "id=fa24ce1a616d9d7800bb70a0296dd29f",
+          "scene": null
+        },
+        {
+          "name": "pages/code_qiandao/code_qiandao",
+          "pathName": "pages/code_qiandao/code_qiandao",
+          "query": "id=9e7190f1616cd8d1008920411cd08154",
+          "scene": null
+        },
+        {
+          "name": "pages/my/my",
+          "pathName": "pages/my/my",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/qiandao_detail/qiandao_detail",
+          "pathName": "pages/qiandao_detail/qiandao_detail",
+          "query": "id=9e7190f1616cd8d1008920411cd08154",
+          "scene": null
+        },
+        {
+          "name": "pages/qiandao_detail/qiandao_detail",
+          "pathName": "pages/qiandao_detail/qiandao_detail",
+          "query": "id=9e7190f1616cd8d1008920411cd08154",
+          "scene": null
+        },
+        {
+          "name": "pages/my/my",
+          "pathName": "pages/my/my",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/my/my",
+          "pathName": "pages/my/my",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/code_mianqian/code_mianqian",
+          "query": "scene=fa24ce1a616d9d7800bb70a0296dd29f",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/code_mianqian/code_mianqian",
+          "query": "scene=fa24ce1a616d9d7800bb70a0296dd29f",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/code_mianqian/code_mianqian",
+          "query": "scene=fa24ce1a616d9d7800bb70a0296dd29f",
+          "scene": null
+        },
+        {
+          "name": "pages/qiandao/qiandao",
+          "pathName": "pages/code_mianqian/code_mianqian",
+          "query": "scene=fa24ce1a616d9d7800bb70a0296dd29f",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

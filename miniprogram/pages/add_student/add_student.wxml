@@ -1,0 +1,16 @@
+<!--pages/add_student/add_student.wxml-->
+<!--顶部头像-->
+<view class="student_top">
+     <image style="width: 100rpx;height: 100rpx;" src="/images/boy.png"></image>
+     <image style="width: 100rpx;height: 100rpx;" src="/images/girl.png"></image>
+</view>
+
+<!--输入学生姓名区域-->
+<view class="input_name">
+     <view>学生姓名：(姓名直接用空格隔开)</view>
+     <textarea bindinput="input_name" style="border: 5rpx solid #111111;width: 98%;margin-top: 10rpx;" value="{{student_name}}" placeholder="如：张三 李四 王五"></textarea>
+</view>
+<view class="input_button">
+     <view catchtap="clear_name">重置</view>
+     <view catchtap="add_name">添加</view>
+</view>

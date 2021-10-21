@@ -1,0 +1,41 @@
+/* pages/jiaru_class/jiaru_class.wxss */
+
+.contain{
+  width: 90% !important;
+  margin-left: 5%;
+  margin-top: 100rpx;
+  border-radius: 20rpx;
+}
+.qiandao{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50rpx;
+}
+
+.custom-image{
+  width: 50%;
+  height: 50%;
+}
+.success_mian{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin-left: 5%;
+
+
+}
+.tuichu{
+  margin-top: 100rpx;
+  width: 200rpx;
+  height: 70rpx;
+  background-color: #2d8cf0;
+  border-radius: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+
+}

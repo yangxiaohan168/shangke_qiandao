@@ -1,0 +1,29 @@
+<!--pages/jiaru_class/jiaru_class.wxml-->
+
+<block wx:if="{{success_show==false}}">
+          <van-cell-group inset custom-class="contain">
+          <van-cell title="班级名称" value="{{shuju.class_name}}" />
+          <van-field
+            value="{{ class_name }}"
+            placeholder="请输入需要加入班级的姓名"
+            bind:change="onChange"
+            label="姓名"
+          />
+        </van-cell-group>
+
+        <view class="qiandao">
+                  <van-button round size="small" color="#7232dd" bind:click="jiaru">加入</van-button>
+        </view>
+</block>
+
+<block wx:if="{{success_show}}">
+  <view class="success_mian">
+    <van-empty
+          class="custom-image"
+          image="https://636c-cloud-3gx0x0b3f9495a6c-1305746789.tcb.qcloud.la/success.png?sign=86c0d4a520b533d0de0aa26a5de229b9&t=1634608884"
+         
+        />
+        <view>加入成功</view>
+        <navigator open-type="exit" target="miniProgram" class="tuichu" hover-class="navigator-hover">退出</navigator>
+  </view>
+</block>

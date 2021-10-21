@@ -1,0 +1,133 @@
+<!--pages/qiandao/qiandao.wxml-->
+<!--弹窗选择操作-->
+<van-popup
+  show="{{ xuan_show }}"
+  round
+  position="bottom"
+  custom-style="height: 50%"
+  bind:close="xuan_Close"
+>
+      <van-picker show-toolbar  columns="{{ class }}" bind:cancel="class_cancel" bind:confirm="class_confirm" />
+</van-popup>
+
+<!--选择签到方式区域-->
+<van-tabs active="{{ active }}" bind:change="qiantype_onChange">
+    <van-tab title="普通签到">
+           <!--顶部班级-->
+            <view class="class_top">
+                <view class="class_top1">
+                  <view class="class_top1_2"></view>
+                  <text class="class_top1_3" catchtap="xuan_class">选择班级</text> 
+                  <view style="color: #999999;font-size: 30rpx;margin-left: 10rpx;">当前班级：{{class_name}} 
+                        
+                  </view>
+                </view>
+                <button size="mini" style="width: 180rpx;height: 60rpx;align-items: center;font-size: 30rpx;" type="primary" catchtap="add_qiandao">新建签到</button>
+            </view>
+
+            <!--弹窗添加班级-->
+            <van-popup custom-style="width:80%;height:200rpx;border-radius:10rpx;" show="{{ add_show }}">
+                  <van-field
+                    value="{{ qiandao_value }}"
+                    placeholder="如：第一节课签到"
+                    bind:change="onChange"
+                    label="签到名称"
+                    maxlength="15"
+                  />
+                  <view class="add">
+                      <view class="add_cancel" catchtap="add_cancel">取消</view>
+                      <view class="add_comfire" catchtap="add_comfire">确定</view>
+                  </view>
+            </van-popup>
+
+            <!--遍历签到-->
+            <view class="class_list">
+                <van-cell-group inset >
+                    <block wx:for="{{qiandao_list}}" wx:key="index">
+                      <van-cell title="{{item.qiandao_name}}" value-class="value_yangshi" value="{{item.riqi}}" is-link bindtap="qiandao_caozuo" data-id="{{item._id}}"/>
+                    </block>
+                </van-cell-group>
+            </view>
+
+            <!--弹窗选择操作-->
+            <van-popup
+              show="{{ caozuo_show }}"
+              round
+              position="bottom"
+              custom-style="height: 30%"
+              bind:close="caozuo_Close"
+            >
+              <view class="caozuo_button">
+                <view style="color: #999999;font-size: 30rpx;">提示：请选择对应功能</view>
+                <van-button size="small" plain type="info" catchtap="go" data-url="/pages/qiandao_detail/qiandao_detail">查看详情</van-button>
+                <van-button size="small" plain type="info" catchtap="delete_qiandao">删除记录</van-button>
+              </view>
+            </van-popup>
+    </van-tab>
+
+
+
+
+
+    <van-tab title="面对面签到">
+          <!--顶部-->
+          <view class="class_top">
+              <view class="class_top1"></view>
+              <button size="mini" style="width: 180rpx;height: 60rpx;align-items: center;font-size: 30rpx;" type="primary" catchtap="add_miandui">新建签到</button>
+          </view>
+
+          <!--弹窗添加-->
+          <van-popup custom-style="width:80%;height:350rpx;border-radius:10rpx;" show="{{ miandui_show }}">
+                <van-field
+                  value="{{ mianqian_value }}"
+                  placeholder="请输入签到名称"
+                  bind:change="mian_onChange"
+                  label="签到名称"
+                />
+                <van-cell title="截止时间" value="{{jiezhi_time}}" size="small" bind:click="set_jiezhi" />
+                <view class="add">
+                    <view class="add_cancel" catchtap="mian_cancel">取消</view>
+                    <view class="add_comfire" catchtap="mian_comfire">确定</view>
+                </view>
+          </van-popup>
+          <van-popup show="{{ jiezhi_show }}" z-index="101" round position="bottom" duration>
+            <van-datetime-picker
+              type="year-month date time"
+              min-date="{{ minDate }}"
+              title="选择截止时间"
+              bind:change="jiezhi_change"
+              bind:confirm="jiezhi_confirm"
+              bind:cancel="jiezhi_cancel"
+              formatter="{{ formatter }}"
+            />
+        </van-popup>
+
+          <!--遍历面对面签到-->
+          <view class="class_list">
+              <van-cell-group inset >
+                  <block wx:for="{{mianqian_list}}" wx:key="index">
+                    <van-cell title="{{item.mianqian_name}}" value="已签人数：{{item.student.length}}" is-link bindtap="mianqian_caozuo" data-id="{{item._id}}"/>
+                  </block>
+              </van-cell-group>
+          </view>
+
+          <!--弹窗选择操作-->
+          <van-popup
+            show="{{ mcaozuo_show }}"
+            round
+            position="bottom"
+            custom-style="height: 50%"
+            bind:close="mcaozuo_Close"
+          >
+            <view class="caozuo_button">
+              <view style="color: #999999;font-size: 30rpx;">提示：请选择对应功能</view>
+              <van-button size="small" plain type="info" catchtap="go_miandui" data-url="/pages/mianqian_detail/mianqian_detail">查看详情</van-button>
+              <van-button size="small" plain type="info" catchtap="daochu">导出记录</van-button>
+              <van-button size="small" plain type="info" catchtap="delete_mianqian">删除记录</van-button>
+   
+            </view>
+          </van-popup>
+    </van-tab>
+</van-tabs>
+
+
