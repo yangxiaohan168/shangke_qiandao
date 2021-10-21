@@ -5,27 +5,7 @@
 </view>
 
 <view class="center_nei">
-       <view class="center_nei1">
-              <view class="center_nei12">
-                    <image style="width: 40rpx;height: 40rpx;" src="/images/sousuo.png"></image>
-                    <view style="margin-left: 20rpx;font-size: 30rpx;">上课搜题</view>
-              </view>
-              <image style="width: 40rpx;height: 40rpx;" src="/images/right.png"></image>
-       </view>
-       <view class="center_nei1">
-              <view class="center_nei12">
-                    <image style="width: 40rpx;height: 40rpx;" src="/images/sousuo.png"></image>
-                    <view style="margin-left: 20rpx;font-size: 30rpx;">上课点名(学生版)</view>
-              </view>
-              <image style="width: 40rpx;height: 40rpx;" src="/images/right.png"></image>
-       </view>
-       <view class="center_nei1">
-              <view class="center_nei12">
-                    <image style="width: 40rpx;height: 40rpx;" src="/images/xiaoxi.png"></image>
-                    <view style="margin-left: 20rpx;font-size: 30rpx;">我的消息</view>
-              </view>
-              <image style="width: 40rpx;height: 40rpx;" src="/images/right.png"></image>
-       </view>
+
        <view class="center_nei1" catchtap="go_class">
               <view class="center_nei12">
                     <image style="width: 40rpx;height: 40rpx;" src="/images/banji.png"></image>
@@ -40,21 +20,6 @@
               </view>
               <image style="width: 40rpx;height: 40rpx;" src="/images/right.png"></image>
        </view>
-       <view class="center_nei1">
-              <view class="center_nei12">
-                    <image style="width: 40rpx;height: 40rpx;" src="/images/zanshang.png"></image>
-                    <view style="margin-left: 20rpx;font-size: 30rpx;">赞赏支持</view>
-              </view>
-              <image style="width: 40rpx;height: 40rpx;" src="/images/right.png"></image>
-       </view>
-       <view class="center_nei1">
-              <view class="center_nei12">
-                    <image style="width: 40rpx;height: 40rpx;" src="/images/jiaocheng.png"></image>
-                    <view style="margin-left: 20rpx;font-size: 30rpx;">使用教程</view>
-              </view>
-              <image style="width: 40rpx;height: 40rpx;" src="/images/right.png"></image>
-       </view>
-
        <button style="font-size: 30rpx;width: 117%;margin-left: -50rpx;" open-type="feedback" >
           <view class="center_nei1">  
                   <view class="center_nei12">
